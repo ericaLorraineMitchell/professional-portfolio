@@ -1,8 +1,22 @@
+/* color pallet options
+#3E8E7E
+#7CD1B8
+#FABB51
+#FAEDC6
+
+#00AF91
+#007965
+#F58634
+#FFCC29 */
+
+:root {
+  --mycolor: rgb(245, 195, 33);
+}
+
 .header {
   padding: 20px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  background-color: #1bc7aa;
+  font-family: "Anton", "sans-serif";
+  background: radial-gradient(circle, #7cd1b8, #3e8e7e);
   color: #ffffff;
 }
 
@@ -12,14 +26,29 @@
 }
 
 .header h1 .Lorraine {
-  color: rgb(245, 195, 33);
+  color: var(--mycolor);
+  font-family: "Brush Script MT", cursive;
+  font-size: 75px;
+  position: relative;
+  animation: bounce 2s linear 1ms normal 3;
+}
+@keyframes bounce {
+  from {
+    top: -70px;
+    bottom: 0px;
+  }
+  to {
+    top: 50px;
+    bottom: 70px;
+  }
 }
 
 .header nav {
-  padding-top: 15px;
+  padding-top: 10px;
   margin-right: 20px;
   float: right;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    "sans-serif";
   font-size: 20px;
 }
 
@@ -30,20 +59,76 @@
 .header nav ul li {
   display: inline-block;
   margin-left: 25px;
+  scroll-behavior: smooth;
+}
+
+.header li a {
+  color: var(--mycolor);
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+nav li .resume a:link {
+  color: white;
+}
+
+nav li .resume a:hover {
+  font-size: 150%;
+}
+
+nav li .resume a:active {
+  color: #ffffff;
 }
 
 .profile-banner {
-  height: 800px;
+  height: 75vh; /*try percentages or viewpoint height - vh */
   width: 100%;
   margin-bottom: 25px;
-  background-image: url("C:\Users\lminv\Desktop\Bootcamp\Homework\professional-portfolio\assets\images\ELM-profile-pic-400px.jpg");
+  background-image: linear-gradient(
+      rgba(228, 199, 72, 0.5),
+      rgba(78, 76, 76, 0.5)
+    ),
+    url("../images/ELM-profile-pic-400px.jpg");
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .banner-subtitle {
-  color: rgb(245, 195, 33);
+  color: var(--mycolor);
   text-align: end;
   text-decoration-line: overline;
   font-size: 28px;
+  position: absolute;
+  top: 90%;
+  left: 60%;
+  /* background-color: #fabb51; */
+}
+
+.about-me p {
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    "sans-serif";
+}
+
+.contact-me {
+  background: radial-gradient(circle, #3e8e7e, #7cd1b8);
+  text-align: center;
+  padding: 5%;
+  font-family: "Anton", "sans-serif";
+  font-size: 26px;
+  font-weight: bolder;
+  word-spacing: 30px;
+}
+
+.contact-me a:link {
+  color: #ffffff;
+}
+.contact-me a:visited {
+  color: var(--mycolor);
+}
+.contact-me a:hover {
+  font-size: 150%;
+}
+.contact-me a:active {
+  color: var(--mycolor);
 }
