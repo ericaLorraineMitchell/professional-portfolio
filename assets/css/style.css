@@ -20,6 +20,7 @@
   background: radial-gradient(circle, #7cd1b8, #3e8e7e);
   color: #ffffff;
   display: flex;
+  justify-content: space-evenly;
 }
 
 .header h1 {
@@ -56,7 +57,6 @@
   font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
     "sans-serif";
   font-size: 20px;
-  display: inline-block;
   display: flex;
   justify-content: flex-end;
 }
@@ -73,12 +73,14 @@
   scroll-behavior: smooth;
 }
 
+/*how to make space in between li items?*/
 .header li a {
   color: var(--mycolor);
   font-size: 26px;
   font-weight: bolder;
   scroll-behavior: smooth;
 }
+
 /*Resume open browser of google docx*/
 #resume {
   color: white;
@@ -106,14 +108,16 @@
   background-size: cover;
   background-position: center;
   display: flex;
+  
 }
 
-/*cannot get this div with h3 to flex and move in position*/
-.banner-subtitle {
-  display: flex;
+/* cannot get this div with h3 to flex and move in position - not sure if should flex or position block on relative*/ 
+/* .banner-subtitle {
+  display: block;
   width: fit-content;
   height: fit-content;
-  justify-content: right;
+ margin: auto;
+
 }
 
 .banner-subtitle h3 {
@@ -121,9 +125,9 @@
   text-decoration-line: overline;
   font-size: 28px;
   background-color: tomato;
-}
+}  */
 
- /*start of main area with section anchors*/
+/*start of main area with section anchors*/
 .about-me p {
   font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
     "sans-serif";
@@ -132,7 +136,7 @@
   padding: 2%;
 }
 
-/*need title to be on outside of border*/
+/* need title to be on outside of border
 .work-title {
   font-size: 28px;
   color: var(--mycolor);
@@ -142,35 +146,38 @@
   width: fit-content;
   height: fit-content;
   float: left;
-}
+} */
 
 /*Flexbox display of linked works*/
 .work-flexbox-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   border-left: 6px solid #7cd1b8;
   margin-left: 20%;
 }
 
-.flexbox-card img {
-  opacity: 0.5;
-  border-radius: 8px;
-  width: 100%;
-}
-
+/*how to get space even for card line up*/
 .flexbox-card {
   display: flex;
   flex-wrap: wrap;
-  flex: 1 0 100%;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex: 1;
   min-height: 100%;
   padding: 32px;
-  flex: 1 0 0;
-  border: 4px solid #7cd1b8;
+  box-sizing: border-box;
+  width: 100%;
+  border: 4px solid #3E8E7E;
+  border-radius: 8px;
   margin-bottom: 24px;
   text-align: center;
+ 
+}
+
+.flexbox-card a img {
+  opacity: 0.5;
+  width: 100%;
+  object-fit: cover;
 }
 
 .card-header {
@@ -185,8 +192,8 @@
   box-shadow: inset 0px 0px 8px var(--mycolor), 0 0 15px var(--mycolor);
 }
 
-.flexbox-card .flexbox-card-1 {
-  flex: 4 0 200px;
+.flexbox-card.flexbox-card-1 {
+  flex: 0 0 90%;
 }
 
 /*Contact box*/
@@ -229,21 +236,53 @@ footer #topBtn {
 
 /*Media Query & responsive design styling*/
 
-/* media query for larger screens
-@media screen and (min-width: 992px) {
-  header {
-    /* width: 75%;
+/*media query for desktop screens*/
+@media screen and (max-width: 1225px) {
+  .header nav ul {
+    display: flex;
+    flex-direction: column;
   }
+  .header li {
+    justify-content: space-between;
+}
 
-  .card-column {
-    flex: 0 0 33.333%;
-    max-width: 33.333%; */
+/*media query for laptop screens*/
+@media screen and (max-width: 1024px) {
+  .header h1 {
+    /* display: block; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .header nav ul {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .header li a {
+    flex-wrap: nowrap;
+  }
+  .header h1 .Lorraine {
+    top: 0px;
   }
 }
 
-@media screen and (min-width: 768px) {
-  /* on tablets, set columns to only be 50% of the width and not grow */
-  /* .card-column {
-    flex: 0 0 50%;
-    max-width: 50%; */
-  } */
+/*media query for tablet screens*/
+@media screen and (max-width: 768px) {
+  .header li a {
+    flex-wrap: nowrap;
+  }
+}
+
+/*media query for phone screens*/
+@media screen and (max-width: 480px) {
+  .header h1 {
+    /* display: block; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+}
+/*smaller than 563 nav words split*/
+/*smaller than 500 header nav has white space aside/*
+/*do we style for smaller than phone ~330?*/
