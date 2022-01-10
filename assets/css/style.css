@@ -73,7 +73,7 @@
   scroll-behavior: smooth;
 }
 
-/*how to make space in between li items?*/
+
 .header li a {
   color: var(--mycolor);
   font-size: 26px;
@@ -173,7 +173,7 @@
   text-align: center;
  
 }
-
+/*how to get image to fit full flexcard - BCS says get bigger image*/
 .flexbox-card a img {
   opacity: 0.5;
   width: 100%;
@@ -242,14 +242,16 @@ footer #topBtn {
     display: flex;
     flex-direction: column;
   }
-  .header li {
-    justify-content: space-between;
+
+.header nav li {
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-bottom: 14px;
 }
 
 /*media query for laptop screens*/
 @media screen and (max-width: 1024px) {
   .header h1 {
-    /* display: block; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -258,9 +260,7 @@ footer #topBtn {
     flex-wrap: nowrap;
     justify-content: center;
   }
-  .header li a {
-    flex-wrap: nowrap;
-  }
+  
   .header h1 .Lorraine {
     top: 0px;
   }
