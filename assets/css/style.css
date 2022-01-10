@@ -13,32 +13,38 @@
   --mycolor: rgb(245, 195, 33);
 }
 
+/*Header styling  with Nav bar click jump links*/
 .header {
   padding: 20px;
   font-family: "Anton", "sans-serif";
   background: radial-gradient(circle, #7cd1b8, #3e8e7e);
   color: #ffffff;
+  display: flex;
 }
 
 .header h1 {
-  display: inline-block;
   font-size: 48px;
+  display: flex;
 }
 
+/*Animation added to middle name*/
 .header h1 .Lorraine {
   color: var(--mycolor);
   font-family: "Brush Script MT", cursive;
   font-size: 75px;
   position: relative;
   animation: bounce 2s linear 1ms normal 3;
+  padding: 10px;
+  top: -30px;
 }
+
 @keyframes bounce {
   from {
-    top: -70px;
-    bottom: 0px;
+    top: -100px;
+    bottom: 40px;
   }
   to {
-    top: 50px;
+    top: 70px;
     bottom: 70px;
   }
 }
@@ -46,14 +52,19 @@
 .header nav {
   padding-top: 10px;
   margin-right: 20px;
-  float: right;
+
   font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
     "sans-serif";
   font-size: 20px;
+  display: inline-block;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .header nav ul {
   list-style-type: none;
+  align-items: right;
+  margin-left: 45px;
 }
 
 .header nav ul li {
@@ -64,24 +75,27 @@
 
 .header li a {
   color: var(--mycolor);
-  font-size: 20px;
+  font-size: 26px;
   font-weight: bolder;
+  scroll-behavior: smooth;
 }
-
-nav li .resume a:link {
+/*Resume open browser of google docx*/
+#resume {
   color: white;
+  text-decoration: none;
 }
 
-nav li .resume a:hover {
+#resume:hover {
   font-size: 150%;
 }
 
-nav li .resume a:active {
+#resume:active {
   color: #ffffff;
 }
 
+/*Profile pic as background image banner*/
 .profile-banner {
-  height: 75vh; /*try percentages or viewpoint height - vh */
+  height: 95vh;
   width: 100%;
   margin-bottom: 25px;
   background-image: linear-gradient(
@@ -91,25 +105,91 @@ nav li .resume a:active {
     url("../images/ELM-profile-pic-400px.jpg");
   background-size: cover;
   background-position: center;
-  position: relative;
+  display: flex;
 }
 
+/*cannot get this div with h3 to flex and move in position*/
 .banner-subtitle {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  justify-content: right;
+}
+
+.banner-subtitle h3 {
   color: var(--mycolor);
-  text-align: end;
   text-decoration-line: overline;
   font-size: 28px;
-  position: absolute;
-  top: 90%;
-  left: 60%;
-  /* background-color: #fabb51; */
+  background-color: tomato;
 }
 
+ /*start of main area with section anchors*/
 .about-me p {
   font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
     "sans-serif";
+  font-size: 26px;
+  border: 6px solid #7cd1b8;
+  padding: 2%;
 }
 
+/*need title to be on outside of border*/
+.work-title {
+  font-size: 28px;
+  color: var(--mycolor);
+  background-color: lightcoral;
+  display: flex;
+  flex-flow: row wrap;
+  width: fit-content;
+  height: fit-content;
+  float: left;
+}
+
+/*Flexbox display of linked works*/
+.work-flexbox-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-left: 6px solid #7cd1b8;
+  margin-left: 20%;
+}
+
+.flexbox-card img {
+  opacity: 0.5;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.flexbox-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 0 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100%;
+  padding: 32px;
+  flex: 1 0 0;
+  border: 4px solid #7cd1b8;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.card-header {
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    "sans-serif";
+  margin: auto;
+  padding: 2%;
+}
+
+.flexbox-card:hover {
+  box-shadow: inset 0px 0px 8px var(--mycolor), 0 0 15px var(--mycolor);
+}
+
+.flexbox-card .flexbox-card-1 {
+  flex: 4 0 200px;
+}
+
+/*Contact box*/
 .contact-me {
   background: radial-gradient(circle, #3e8e7e, #7cd1b8);
   text-align: center;
@@ -118,6 +198,7 @@ nav li .resume a:active {
   font-size: 26px;
   font-weight: bolder;
   word-spacing: 30px;
+  margin-top: 2%;
 }
 
 .contact-me a:link {
@@ -132,3 +213,37 @@ nav li .resume a:active {
 .contact-me a:active {
   color: var(--mycolor);
 }
+
+/*Footer area with button that click jumps to top of page*/
+footer {
+  margin-top: 2%;
+  text-align: end;
+  font-weight: bold;
+  text-decoration-line: underline;
+}
+
+footer #topBtn {
+  margin-left: 2%;
+  background-color: var(--mycolor);
+}
+
+/*Media Query & responsive design styling*/
+
+/* media query for larger screens
+@media screen and (min-width: 992px) {
+  header {
+    /* width: 75%;
+  }
+
+  .card-column {
+    flex: 0 0 33.333%;
+    max-width: 33.333%; */
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* on tablets, set columns to only be 50% of the width and not grow */
+  /* .card-column {
+    flex: 0 0 50%;
+    max-width: 50%; */
+  } */
