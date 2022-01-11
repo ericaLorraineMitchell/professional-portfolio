@@ -26,6 +26,7 @@
 .header h1 {
   font-size: 48px;
   display: flex;
+  align-items: center;
 }
 
 /*Animation added to middle name*/
@@ -36,7 +37,6 @@
   position: relative;
   animation: bounce 2s linear 1ms normal 3;
   padding: 10px;
-  top: -30px;
 }
 
 @keyframes bounce {
@@ -53,7 +53,6 @@
 .header nav {
   padding-top: 10px;
   margin-right: 20px;
-
   font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
     "sans-serif";
   font-size: 20px;
@@ -72,7 +71,6 @@
   margin-left: 25px;
   scroll-behavior: smooth;
 }
-
 
 .header li a {
   color: var(--mycolor);
@@ -95,7 +93,7 @@
   color: #ffffff;
 }
 
-/*Profile pic as background image banner*/
+/*Profile pic as background image banner with relative position so title can sit on top*/
 .profile-banner {
   height: 95vh;
   width: 100%;
@@ -107,25 +105,23 @@
     url("../images/ELM-profile-pic-400px.jpg");
   background-size: cover;
   background-position: center;
-  display: flex;
-  
+  position: relative;
 }
 
-/* cannot get this div with h3 to flex and move in position - not sure if should flex or position block on relative*/ 
-/* .banner-subtitle {
-  display: block;
+/*Set to absolute position of relative image*/
+.banner-subtitle {
+  position: absolute;
   width: fit-content;
   height: fit-content;
- margin: auto;
-
+  bottom: 3px;
+  left: 10px;
 }
 
 .banner-subtitle h3 {
-  color: var(--mycolor);
+  color: #faedc6;
   text-decoration-line: overline;
   font-size: 28px;
-  background-color: tomato;
-}  */
+}
 
 /*start of main area with section anchors*/
 .about-me p {
@@ -136,7 +132,7 @@
   padding: 2%;
 }
 
-/* need title to be on outside of border
+/* need title to be on outside of border - Add later
 .work-title {
   font-size: 28px;
   color: var(--mycolor);
@@ -148,7 +144,7 @@
   float: left;
 } */
 
-/*Flexbox display of linked works*/
+/*Flexbox display of linked works and background image css urls*/
 .work-flexbox-container {
   display: flex;
   flex-direction: row;
@@ -156,6 +152,7 @@
   flex-wrap: wrap;
   border-left: 6px solid #7cd1b8;
   margin-left: 20%;
+  padding-left: 20px;
 }
 
 /*how to get space even for card line up*/
@@ -163,37 +160,75 @@
   display: flex;
   flex-wrap: wrap;
   flex: 1;
-  min-height: 100%;
-  padding: 32px;
-  box-sizing: border-box;
   width: 100%;
-  border: 4px solid #3E8E7E;
+  min-height: 100%;
+  box-sizing: border-box;
+  border: 4px solid #3e8e7e;
   border-radius: 8px;
   margin-bottom: 24px;
-  text-align: center;
- 
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
 }
-/*how to get image to fit full flexcard - BCS says get bigger image*/
-.flexbox-card a img {
+/*how to get linked image to fit full flexcard - BCS says get bigger image*/
+/* .flexbox-card a img {
   opacity: 0.5;
   width: 100%;
   object-fit: cover;
+  justify-content: center;
+  align-items: center;
+} */
+
+.flexbox-card-1 {
+  flex: 0 0 90%;
+  background-image: url("../images/password-image.PNG");
+  background-size: cover;
+  height: 250px;
+  left: 40px;
+}
+
+.flexbox-card-2 {
+  flex: 0 0 30%;
+  background-image: url("../images/day-planner-image.PNG");
+  background-size: cover;
+  height: 250px;
+  background-position: center;
+}
+
+.flexbox-card-3 {
+  flex: 0 0 30%;
+  background-image: url("../images/weather-dashboard-image.PNG");
+  background-size: cover;
+  height: 250px;
+  background-position: center;
+}
+
+.flexbox-card-4 {
+  flex: 0 0 30%;
+  background-image: url("../images/management-image.PNG");
+  background-size: cover;
+  height: 250px;
+  background-position: center;
 }
 
 .card-header {
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
     "sans-serif";
-  margin: auto;
+  background-color: #faedc6;
   padding: 2%;
+  position: absolute;
+  color: #3e8e7e;
+  opacity: 0.9;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+  bottom: 6px;
+  left: 0px;
 }
 
 .flexbox-card:hover {
   box-shadow: inset 0px 0px 8px var(--mycolor), 0 0 15px var(--mycolor);
-}
-
-.flexbox-card.flexbox-card-1 {
-  flex: 0 0 90%;
 }
 
 /*Contact box*/
@@ -243,10 +278,11 @@ footer #topBtn {
     flex-direction: column;
   }
 
-.header nav li {
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  margin-bottom: 14px;
+  .header nav li {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-bottom: 14px;
+  }
 }
 
 /*media query for laptop screens*/
@@ -260,11 +296,17 @@ footer #topBtn {
     flex-wrap: nowrap;
     justify-content: center;
   }
-  
+
   .header h1 .Lorraine {
     top: 0px;
   }
-}
+  .work-flexbox-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 200px;
+    width: 200px;
+  }
 
 /*media query for tablet screens*/
 @media screen and (max-width: 768px) {
@@ -276,13 +318,28 @@ footer #topBtn {
 /*media query for phone screens*/
 @media screen and (max-width: 480px) {
   .header h1 {
-    /* display: block; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
+  .header nav ul {
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-right: 60px;
+  }
+
+  .header li a {
+    flex-wrap: nowrap;
+    font-size: 24px;
+  }
 }
-/*smaller than 563 nav words split*/
-/*smaller than 500 header nav has white space aside/*
-/*do we style for smaller than phone ~330?*/
