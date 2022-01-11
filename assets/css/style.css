@@ -95,7 +95,7 @@
 
 /*Profile pic as background image banner with relative position so title can sit on top*/
 .profile-banner {
-  height: 95vh;
+  height: 45vh;
   width: 100%;
   margin-bottom: 25px;
   background-image: linear-gradient(
@@ -296,7 +296,7 @@ footer #topBtn {
   /*media query for tablet screens*/
   @media screen and (max-width: 768px) {
     .header li a {
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
     }
 
     /*need help with flex box card 2-4 stacking in container*/
