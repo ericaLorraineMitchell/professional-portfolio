@@ -155,7 +155,6 @@
   padding-left: 20px;
 }
 
-/*how to get space even for card line up*/
 .flexbox-card {
   display: flex;
   flex-wrap: wrap;
@@ -171,14 +170,6 @@
   align-items: center;
   opacity: 0.8;
 }
-/*how to get linked image to fit full flexcard - BCS says get bigger image*/
-/* .flexbox-card a img {
-  opacity: 0.5;
-  width: 100%;
-  object-fit: cover;
-  justify-content: center;
-  align-items: center;
-} */
 
 .flexbox-card-1 {
   flex: 0 0 90%;
@@ -210,6 +201,7 @@
   background-size: cover;
   height: 250px;
   background-position: center;
+  width: 100%;
 }
 
 .card-header {
@@ -300,18 +292,20 @@ footer #topBtn {
   .header h1 .Lorraine {
     top: 0px;
   }
-  .work-flexbox-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 200px;
-    width: 200px;
-  }
 
   /*media query for tablet screens*/
   @media screen and (max-width: 768px) {
     .header li a {
       flex-wrap: nowrap;
+    }
+
+    /*need help with flex box card 2-4 stacking in container*/
+    .work-flexbox-container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 200px;
+      width: 200px;
     }
   }
 
