@@ -24,6 +24,6 @@ Please visit the webpage here [ELM](https://ericalorrainemitchell.github.io/prof
 
 This is an image of the desired appearance and functionality:
 
-![WebpageScreenshot](./assets/images/screenshot1.png)
-![WebpageScreenshot](./assets/images/screenshot2.png)
-![WebpageScreenshot](./assets/images/screenshot3.png)
+![WebpageScreenshot](assets/images/screenshot1.png)
+![WebpageScreenshot](assets/images/screenshot2.png)
+![WebpageScreenshot](assets/images/screenshot3.png)
