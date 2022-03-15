@@ -103,8 +103,9 @@
       rgba(78, 76, 76, 0.5)
     ),
     url("../images/ELM-profile-pic-400px.jpg");
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
   position: relative;
 }
 
@@ -118,21 +119,24 @@
 }
 
 .banner-subtitle h3 {
-  color: #faedc6;
+  color: var(--mycolor);
   text-decoration-line: overline;
   font-size: 28px;
 }
 
 /*start of main area with section anchors*/
 .about-me p {
+  width: 665px;
+  height: 295px;
   font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
     "sans-serif";
-  font-size: 26px;
+  font-size: 22px;
   border: 6px solid #7cd1b8;
   padding: 2%;
+  border-radius: 8px;
 }
 
-/* need title to be on outside of border - Add later
+
 .work-title {
   font-size: 28px;
   color: var(--mycolor);
@@ -142,7 +146,7 @@
   width: fit-content;
   height: fit-content;
   float: left;
-} */
+} 
 
 /*Flexbox display of linked works and background image css urls*/
 .work-flexbox-container {
