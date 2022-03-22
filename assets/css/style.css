@@ -98,14 +98,11 @@
   height: 45vh;
   width: 100%;
   margin-bottom: 25px;
-  background-image: linear-gradient(
-      rgba(228, 199, 72, 0.5),
-      rgba(78, 76, 76, 0.5)
-    ),
-    url("../images/ELM-profile-pic-400px.jpg");
-  background-size: contain;
+  background-image: url("../images/ELM-profile-pic-400px.jpg");
+  background-size: 40%;
   background-repeat: no-repeat;
   background-position: right;
+  padding: 2%;
   position: relative;
 }
 
@@ -134,10 +131,10 @@
   border: 6px solid #7cd1b8;
   padding: 2%;
   border-radius: 8px;
+  position: relative;
 }
 
-
-.work-title {
+/* .work-title {
   font-size: 28px;
   color: var(--mycolor);
   background-color: lightcoral;
@@ -146,7 +143,7 @@
   width: fit-content;
   height: fit-content;
   float: left;
-} 
+} */
 
 /*Flexbox display of linked works and background image css urls*/
 .work-flexbox-container {
