@@ -9,34 +9,50 @@
 #F58634
 #FFCC29 */
 
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    "sans-serif";
+}
+
 :root {
   --mycolor: rgb(245, 195, 33);
 }
 
-/*Header styling  with Nav bar click jump links*/
-.header {
+/*Nav bar styling & links*/
+nav {
   padding: 20px;
-  font-family: "Anton", "sans-serif";
   background: radial-gradient(circle, #7cd1b8, #3e8e7e);
   color: #ffffff;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
 }
 
-.header h1 {
-  font-size: 48px;
+.img {
+  border-radius: 50%;
+}
+
+.name h1 {
+  text-transform: uppercase;
+  font-size: 42px;
   display: flex;
   align-items: center;
 }
 
 /*Animation added to middle name*/
-.header h1 .Lorraine {
+.name h1 .Lorraine {
   color: var(--mycolor);
+  text-transform: none;
   font-family: "Brush Script MT", cursive;
-  font-size: 75px;
+  font-size: 76px;
+  letter-spacing: 2px;
   position: relative;
   animation: bounce 2s linear 1ms normal 3;
-  padding: 10px;
+  padding: 12px;
 }
 
 @keyframes bounce {
@@ -50,88 +66,78 @@
   }
 }
 
-.header nav {
-  padding-top: 10px;
-  margin-right: 20px;
-  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
-    "sans-serif";
-  font-size: 20px;
+/*Initials for smaller screens*/
+.initials h1 {
+  color: var(--mycolor);
+  text-transform: none;
+  font-family: "Brush Script MT", cursive;
+  font-size: 66px;
+  letter-spacing: 8px;
+  position: relative;
+  padding: 12px;
+  display: none;
+}
+
+.nav-links {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
+  width: 35%;
 }
 
-.header nav ul {
-  list-style-type: none;
-  align-items: right;
-  margin-left: 45px;
+.nav-links li {
+  list-style: none;
 }
 
-.header nav ul li {
-  display: inline-block;
-  margin-left: 25px;
-  scroll-behavior: smooth;
-}
-
-.header li a {
+.nav-links a {
   color: var(--mycolor);
   font-size: 26px;
   font-weight: bolder;
+  letter-spacing: 1px;
   scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+.lines {
+  display: none;
+}
+
+.lines div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
 }
 
 /*Resume open browser of google docx*/
 #resume {
   color: white;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 #resume:hover {
-  font-size: 150%;
+  font-size: 200%;
 }
 
 #resume:active {
   color: #ffffff;
 }
 
-/*Profile pic as background image banner with relative position so title can sit on top*/
-.profile-banner {
-  height: 45vh;
-  width: 100%;
-  margin-bottom: 25px;
-  background-image: url("../images/ELM-profile-pic-400px.jpg");
-  background-size: 40%;
-  background-repeat: no-repeat;
-  background-position: right;
-  padding: 2%;
-  position: relative;
-}
-
-/*Set to absolute position of relative image*/
-.banner-subtitle {
-  position: absolute;
-  width: fit-content;
-  height: fit-content;
-  bottom: 3px;
-  left: 10px;
-}
-
-.banner-subtitle h3 {
-  color: var(--mycolor);
-  text-decoration-line: overline;
-  font-size: 28px;
-}
-
-/*start of main area with section anchors*/
+/*About section*/
 .about-me p {
-  width: 665px;
-  height: 295px;
-  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
-    "sans-serif";
   font-size: 22px;
   border: 6px solid #7cd1b8;
-  padding: 2%;
+  padding: 1%;
   border-radius: 8px;
-  position: relative;
+  margin: 2%;
+}
+
+.full-name {
+  display: none;
+}
+
+.title {
+  color: var(--mycolor);
+  font-weight: bold;
 }
 
 /* .work-title {
@@ -145,7 +151,7 @@
   float: left;
 } */
 
-/*Flexbox display of linked works and background image css urls*/
+/*Flexbox display of linked works*/
 .work-flexbox-container {
   display: flex;
   flex-direction: row;
@@ -190,7 +196,7 @@
 
 .flexbox-card-3 {
   flex: 0 0 30%;
-  background-image: url("../images/weather-dashboard-image.PNG");
+  background-image: url("../images/note-taker-image.jpg");
   background-size: cover;
   height: 250px;
   background-position: center;
@@ -207,8 +213,6 @@
 
 .card-header {
   font-size: 18px;
-  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
-    "sans-serif";
   background-color: #faedc6;
   padding: 2%;
   position: absolute;
@@ -229,7 +233,6 @@
   background: radial-gradient(circle, #3e8e7e, #7cd1b8);
   text-align: center;
   padding: 5%;
-  font-family: "Anton", "sans-serif";
   font-size: 26px;
   font-weight: bolder;
   word-spacing: 30px;
@@ -260,82 +263,65 @@ footer {
 footer #topBtn {
   margin-left: 2%;
   background-color: var(--mycolor);
+  border-radius: 3px;
 }
 
-/*Media Query & responsive design styling*/
+/*Media Query responsive design*/
 
-/*media query for desktop screens*/
-@media screen and (max-width: 1225px) {
-  .header nav ul {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .header nav li {
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    margin-bottom: 14px;
-  }
-}
-
-/*media query for laptop screens*/
 @media screen and (max-width: 1024px) {
-  .header h1 {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  .header nav ul {
-    flex-wrap: nowrap;
-    justify-content: center;
-  }
-
-  .header h1 .Lorraine {
-    top: 0px;
+  .nav-links {
+    width: 60%;
   }
 
   /*media query for tablet screens*/
   @media screen and (max-width: 768px) {
-    .header li a {
-      flex-wrap: wrap;
+    body {
+      overflow-x: hidden;
     }
 
-    /*need help with flex box card 2-4 stacking in container*/
-    .work-flexbox-container {
+    .name h1 {
+      display: none;
+    }
+
+    .initials h1 {
+      display: block;
+      font-size: 56px;
+    }
+
+    .img {
+      height: 14vh;
+      border-radius: 50%;
+    }
+
+    .nav-links {
+      position: absolute;
+      right: 0px;
+      height: 42vh;
+      top: 18.5vh;
+      background-color: #3e8e7e;
       display: flex;
       flex-direction: column;
-      flex-wrap: wrap;
-      height: 200px;
-      width: 200px;
-    }
-  }
-
-  /*media query for phone screens*/
-  @media screen and (max-width: 480px) {
-    .header h1 {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
       align-items: center;
-      justify-content: center;
-    }
-    .header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      width: 35%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
     }
 
-    .header nav ul {
-      flex-wrap: nowrap;
-      justify-content: center;
-      align-items: center;
-      padding-right: 60px;
+    .nav-links a {
+      font-size: 20px;
     }
 
-    .header li a {
-      flex-wrap: nowrap;
-      font-size: 24px;
+    .lines {
+      display: block;
+      cursor: pointer;
+    }
+
+    .nav-active {
+      transform: translateX(0%);
+    }
+
+    .full-name {
+      display: inline;
     }
   }
 }

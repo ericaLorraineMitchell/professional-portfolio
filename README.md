@@ -1,29 +1,25 @@
-# professional-portfolio
+# ELM professional-portfolio
 
 ## Description
-
-This project is a fluid professional portfolio of myself and my tech work. Its build is a culmination of learned programming and styling. It is meant to be reflective of my novice skills and potential career offerings. The project includes a docx link to my current Resume.
+This is a professional portfolio of myself and some of my ongoing development works. The build is a culmination of frontend and backend programming and styling that is reflective of my learned skills and potential career offerings. The portfolio includes a .docx link to my current Resume.
 
 The following is a list portfolio sections:
 
 ### About Me
 
-Includes education, previous professional experience and current career trajectory.
+Includes education, professional experience and current career trajectory.
 
 ### Work
 
-Links to various language program created and published works.
+Links to various language program builds and published works.
 
 ### Contact
 
-Includes links to specific methods of contact and visibility to social pages.
+Includes links to contact me and directs to social pages.
+
+- [Email](elorrainemitchell@gmail.com)
+- [GitHub](https://github.com/ericaLorraineMitchell)
 
 ## Usage
 
 Please visit the webpage here [ELM](https://ericalorrainemitchell.github.io/professional-portfolio).
-
-This is an image of the desired appearance and functionality:
-
-![WebpageScreenshot](assets/images/screenshot1.png)
-![WebpageScreenshot](assets/images/screenshot2.png)
-![WebpageScreenshot](assets/images/screenshot3.png)
