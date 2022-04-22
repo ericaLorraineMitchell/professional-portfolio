@@ -140,16 +140,17 @@ nav {
   font-weight: bold;
 }
 
-/* .work-title {
+.work-title {
   font-size: 28px;
   color: var(--mycolor);
-  background-color: lightcoral;
   display: flex;
   flex-flow: row wrap;
   width: fit-content;
   height: fit-content;
   float: left;
-} */
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
 
 /*Flexbox display of linked works*/
 .work-flexbox-container {
@@ -159,7 +160,7 @@ nav {
   flex-wrap: wrap;
   border-left: 6px solid #7cd1b8;
   margin-left: 20%;
-  padding-left: 20px;
+  padding: 1%;
 }
 
 .flexbox-card {
@@ -180,7 +181,7 @@ nav {
 
 .flexbox-card-1 {
   flex: 0 0 90%;
-  background-image: url("../images/password-image.PNG");
+  background-image: url("../images/gym-diary.png");
   background-size: cover;
   height: 250px;
   left: 40px;
@@ -209,6 +210,14 @@ nav {
   height: 250px;
   background-position: center;
   width: 100%;
+}
+
+.flexbox-card-5 {
+  flex: 0 0 90%;
+  background-image: url("../images/password-image.PNG");
+  background-size: cover;
+  height: 250px;
+  left: 40px;
 }
 
 .card-header {
@@ -255,13 +264,13 @@ nav {
 /*Footer area with button that click jumps to top of page*/
 footer {
   margin-top: 2%;
-  text-align: end;
+  text-align: center;
   font-weight: bold;
-  text-decoration-line: underline;
 }
 
 footer #topBtn {
-  margin-left: 2%;
+  font-size: 16px;
+  margin-left: 1%;
   background-color: var(--mycolor);
   border-radius: 3px;
 }
