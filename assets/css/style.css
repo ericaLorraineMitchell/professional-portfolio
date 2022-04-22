@@ -147,8 +147,9 @@ nav {
   float: left;
   writing-mode: vertical-rl;
   text-orientation: upright;
-  margin-left: 14%;
+  margin-left: 15%;
   margin-top: 350px;
+
 }
 
 /*Flexbox display of linked works*/
@@ -245,8 +246,12 @@ nav {
   margin-top: 2%;
 }
 
+#email {
+  color: white;
+}
+
 .contact-me a:link {
-  color: #ffffff;
+  color: var(--mycolor);
 }
 .contact-me a:visited {
   color: var(--mycolor);
@@ -294,7 +299,7 @@ footer #topBtn {
   #resume {
     color: var(--mycolor);
     text-decoration: underline;
-  } 
+  }
   #resume:hover {
     font-size: 200%;
   }
@@ -338,7 +343,7 @@ footer #topBtn {
     position: absolute;
     right: 0px;
     height: 42vh;
-    top: 28.5vh;
+    top: 29.5vh;
     background-color: #3e8e7e;
     display: flex;
     flex-direction: column;
