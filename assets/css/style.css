@@ -140,16 +140,15 @@ nav {
   font-weight: bold;
 }
 
-.work-title {
+.work-title h3 {
   font-size: 28px;
   color: var(--mycolor);
   display: flex;
-  flex-flow: row wrap;
-  width: fit-content;
-  height: fit-content;
   float: left;
   writing-mode: vertical-rl;
   text-orientation: upright;
+  margin-left: 14%;
+  margin-top: 350px;
 }
 
 /*Flexbox display of linked works*/
@@ -174,8 +173,6 @@ nav {
   border-radius: 8px;
   margin-bottom: 24px;
   position: relative;
-  justify-content: center;
-  align-items: center;
   opacity: 0.8;
 }
 
@@ -331,6 +328,10 @@ footer #topBtn {
 
     .full-name {
       display: inline;
+    }
+
+    .flexbox-card {
+      flex: 0 0 100%;
     }
   }
 }
