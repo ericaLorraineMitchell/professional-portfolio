@@ -274,64 +274,98 @@ footer #topBtn {
 
 /*Media Query responsive design*/
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1500px) {
   .nav-links {
-    width: 60%;
+    position: absolute;
+    top: 2%;
+    right: 10px;
+    justify-content: space-evenly;
+    width: 52%;
+  }
+  .nav-links a {
+    color: white;
+    font-size: 26px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    scroll-behavior: smooth;
+    text-decoration: none;
   }
 
-  /*media query for tablet screens*/
-  @media screen and (max-width: 768px) {
-    body {
-      overflow-x: hidden;
-    }
+  #resume {
+    color: var(--mycolor);
+    text-decoration: underline;
+  } 
+  #resume:hover {
+    font-size: 200%;
+  }
 
-    .name h1 {
-      display: none;
-    }
+  #resume:active {
+    color: var(--mycolor);
+  }
 
-    .initials h1 {
-      display: block;
-      font-size: 56px;
-    }
+  .name h1 {
+    font-size: 32px;
+    display: flex;
+  }
 
-    .img {
-      height: 14vh;
-      border-radius: 50%;
-    }
+  .img {
+    height: 42vh;
+    border-radius: 50%;
+  }
+}
 
-    .nav-links {
-      position: absolute;
-      right: 0px;
-      height: 42vh;
-      top: 18.5vh;
-      background-color: #3e8e7e;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 35%;
-      transform: translateX(100%);
-      transition: transform 0.5s ease-in;
-    }
+/*media query for tablet screens*/
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
 
-    .nav-links a {
-      font-size: 20px;
-    }
+  .name h1 {
+    display: none;
+  }
 
-    .lines {
-      display: block;
-      cursor: pointer;
-    }
+  .initials h1 {
+    display: block;
+    font-size: 56px;
+  }
 
-    .nav-active {
-      transform: translateX(0%);
-    }
+  .img {
+    height: 24vh;
+    border-radius: 50%;
+  }
 
-    .full-name {
-      display: inline;
-    }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 42vh;
+    top: 28.5vh;
+    background-color: #3e8e7e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
 
-    .flexbox-card {
-      flex: 0 0 100%;
-    }
+  .nav-links a {
+    font-size: 20px;
+  }
+
+  .lines {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  .full-name {
+    display: inline;
+  }
+
+  .flexbox-card {
+    flex: 0 0 100%;
   }
 }
