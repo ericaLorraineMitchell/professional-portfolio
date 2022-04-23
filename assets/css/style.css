@@ -81,7 +81,7 @@ nav {
 .nav-links {
   display: flex;
   justify-content: space-around;
-  width: 35%;
+  width: 30%;
 }
 
 .nav-links li {
@@ -236,13 +236,17 @@ nav {
 }
 
 /*Contact box*/
+.contact-btns{
+  display: none;
+}
+
 .contact-me {
   background: radial-gradient(circle, #3e8e7e, #7cd1b8);
   text-align: center;
   padding: 5%;
   font-size: 26px;
   font-weight: bolder;
-  word-spacing: 30px;
+  word-spacing: 60px;
   margin-top: 2%;
 }
 
@@ -287,6 +291,7 @@ footer #topBtn {
     justify-content: space-evenly;
     width: 52%;
   }
+
   .nav-links a {
     color: white;
     font-size: 26px;
@@ -343,7 +348,7 @@ footer #topBtn {
     position: absolute;
     right: 0px;
     height: 42vh;
-    top: 29.5vh;
+    top: 28.5vh;
     background-color: #3e8e7e;
     display: flex;
     flex-direction: column;
@@ -354,7 +359,7 @@ footer #topBtn {
   }
 
   .nav-links a {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .lines {
@@ -373,4 +378,36 @@ footer #topBtn {
   .flexbox-card {
     flex: 0 0 100%;
   }
+
+.contact-me {
+  display: none;
+}
+
+.contact-btns{
+  display: block;
+  background: radial-gradient(circle, #3e8e7e, #7cd1b8);
+  text-align: center;
+  padding: 5%;
+  font-size: 40px;
+  word-spacing: 60px;
+  margin-top: 2%;
+}
+
+  .fa {
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: white;
+  }
+
+  .fa-envelope {
+    color: var(--mycolor);
+  }
+
+  .fa:hover {
+    opacity: 0.7;
+    color: var(--mycolor);
+  }
+
 }
