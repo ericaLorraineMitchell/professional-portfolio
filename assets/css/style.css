@@ -378,6 +378,10 @@ footer #topBtn {
     flex: 0 0 100%;
   }
 
+  .flexbox-card-1 {
+    flex: 0 0 100%;
+  }
+
   .contact-me {
     display: none;
   }
