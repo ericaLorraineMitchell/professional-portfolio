@@ -27,7 +27,7 @@ nav {
   background: radial-gradient(circle, #7cd1b8, #3e8e7e);
   color: #ffffff;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   min-height: 8vh;
 }
@@ -80,7 +80,7 @@ nav {
 
 .nav-links {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 30%;
 }
 
@@ -102,7 +102,7 @@ nav {
 }
 
 .lines div {
-  width: 25px;
+  width: 33px;
   height: 3px;
   background-color: white;
   margin: 5px;
@@ -235,7 +235,7 @@ nav {
 }
 
 /*Contact box*/
-.contact-btns {
+.contact-me i {
   display: none;
 }
 
@@ -374,6 +374,29 @@ footer #topBtn {
     display: inline;
   }
 
+  .work-title h3 {
+    font-size: 28px;
+    color: var(--mycolor);
+    display: none;
+    float: none;
+    writing-mode: horizontal-tb;
+    text-orientation: sideways;
+    /* margin-left: 15%;
+    margin-top: 350px; */
+  }
+
+  .work-flexbox-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-left: 0%;
+    /* padding: 1%; */
+    border-left: none;
+    /* margin: 5px; */
+  }
+
   .flexbox-card {
     flex: 0 0 100%;
   }
@@ -382,11 +405,15 @@ footer #topBtn {
     flex: 0 0 100%;
   }
 
-  .contact-me {
+  .contact-me i {
+    display: inline-block; 
+  }
+
+  .contact-me span {
     display: none;
   }
 
-  .contact-btns {
+  .contact-me {
     display: block;
     background: radial-gradient(circle, #3e8e7e, #7cd1b8);
     text-align: center;
